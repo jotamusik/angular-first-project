@@ -1,0 +1,18 @@
+<h2> Crear Usuario </h2>
+
+<p-messages [(value)]="msgs"></p-messages>
+
+<h3 class="first">Nombre</h3>
+<input id="name" type="text" size="30" pInputText [(ngModel)]="user.name">
+
+<h3 class="first">Email</h3>
+<input id="email" type="text" size="30" pInputText [(ngModel)]="user.email">
+
+<h3 class="first">Dirección</h3>
+<input id="address" type="text" size="30" pInputText [(ngModel)]="user.address">
+
+<h3 class="first">Género</h3>
+<p-selectButton [options]="genders" [(ngModel)]="user.gender"></p-selectButton>
+<br>
+<br>
+<p-button (onClick)="createUser()" icon="fa fa-fw fa-check" iconPos="right" label="Enviar"></p-button>

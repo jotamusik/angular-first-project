@@ -1,0 +1,16 @@
+.header-title {
+
+  width: 100%;
+  font-size: larger;
+  text-align: center;
+  font-family: sans-serif;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #5c167d;
+  padding-top: 1em;
+  height: 2.5em;
+  top: 0;
+  left: 0;
+
+}
+
