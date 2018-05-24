@@ -28,4 +28,8 @@ export class UserService {
   deleteUser(users: User[]): Observable<Response> {
     return this.http.post<Response>(this.usersUrl + 'delete', users);
   }
+
+  modifyUser(user: User): Observable<User> {
+    return this.http.put<User>(this.usersUrl + 'modify', user);
+  }
 }

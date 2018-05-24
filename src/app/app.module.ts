@@ -9,8 +9,12 @@ import { UserListComponent } from './component/user-list/user-list.component';
 import { UserService } from './service/user.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CreateUserComponent } from './component/create-user/create-user.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DeleteUserComponent } from './component/delete-user/delete-user.component';
+import { ModifyUserComponent } from './component/modify-user/modify-user.component';
+import { LoginComponent } from './component/login/login.component';
+import { AuthService } from './service/auth.service';
+
 
 
 
@@ -20,17 +24,21 @@ import { DeleteUserComponent } from './component/delete-user/delete-user.compone
     HeaderComponent,
     UserListComponent,
     CreateUserComponent,
-    DeleteUserComponent
+    DeleteUserComponent,
+    ModifyUserComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     PrimengModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
-    UserService
+    UserService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

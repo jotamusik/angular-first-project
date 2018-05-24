@@ -4,6 +4,7 @@ export class User {
   email: string;
   address: string;
   gender: string;
+  password: string;
 
   equals(user: User) {
     return ( this.email === user.email );
