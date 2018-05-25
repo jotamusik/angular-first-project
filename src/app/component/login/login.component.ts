@@ -1,9 +1,8 @@
-import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {Router} from '@angular/router';
-import {AuthService} from '../../service/auth.service';
-import {User} from '../../model/user';
-import {HttpResponse} from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from '../../service/auth.service';
+import { HttpResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -32,7 +31,7 @@ export class LoginComponent implements OnInit {
 
     this.authService.login(this.form.value)
       .subscribe((response: HttpResponse<any>) => {
-        console.log(response.headers.keys());
+
         console.log('User is logged in');
         this.router.navigateByUrl('/user/show');
       });
